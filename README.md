@@ -18,7 +18,7 @@
   
   Espoir Habimfura -> API and Testing             `e.habimfura@alustudent.com`
   
-  David Irihose     Devops and Docs            `d.irihose@alustudent.com` 
+  David Irihose  ->   Devops and Docs            `d.irihose@alustudent.com` 
 
 ---
 
