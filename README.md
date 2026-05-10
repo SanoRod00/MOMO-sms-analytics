@@ -141,6 +141,8 @@ bash scripts/serve_frontend.sh
 
 Columns: **Backlog · To Do · In Progress · In Review · Done**. Cards labeled by domain: `etl`, `db`, `frontend`, `api`, `infra`, `docs`, `testing`.
 
+![Scrum Board](./docs/assets/scrum-board.png)
+
 ---
 
 ##  Documentation
