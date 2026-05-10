@@ -8,17 +8,13 @@
 
 **Team Name:** Underrated Silicon Valley
 
-            
-          
- Sano Rodrigue   ->   ETL & Backend                 `r.sano@alustudent.com` 
- 
-  Gary Murasira  ->   Database                      `g.murasira@alustudent.com` 
-  
-  Merci Ndekwe   ->   Frontend Dashboard           `m.ndekwe@alustudent.com` 
-  
-  Espoir Habimfura -> API and Testing             `e.habimfura@alustudent.com`
-  
-  David Irihose  ->   Devops and Docs            `d.irihose@alustudent.com` 
+| Name | GitHub | Role |
+|---|---|---|
+| Sano Rodrigue | @SanoRod00 | ETL & Backend |
+| Gary Murasira | @garymurasira | Database |
+| Merci Ndekwe | @mndekwe-dot | Frontend Dashboard |
+| Espoir Habimfura | @ehabimfura | API & Testing |
+| David Irihose | @David-Irihose | DevOps & Docs |
 
 ---
 
@@ -141,9 +137,23 @@ bash scripts/serve_frontend.sh
 
 ##  Scrum Board
 
- **Board link:** _[Add your GitHub Projects / Trello / Jira link here]_
+**Board link:** [Jira — MOMO SMS Analytics](https://alustudent-team-elyjmvr5.atlassian.net/jira/software/projects/SCRUM/boards/1)
 
-Three columns: **To Do · In Progress · Done**. Issues labeled by domain: `etl`, `db`, `frontend`, `api`, `infra`, `docs`, `testing`.
+Columns: **Backlog · To Do · In Progress · In Review · Done**. Cards labeled by domain: `etl`, `db`, `frontend`, `api`, `infra`, `docs`, `testing`.
+
+![Scrum Board](./docs/assets/scrum-board.png)
+
+---
+
+##  Documentation
+
+| Document | Description |
+|---|---|
+| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Component breakdown, technology choices, and data-flow rationale |
+| [docs/AGILE.md](./docs/AGILE.md) | Sprint cadence, ceremonies, branching conventions, and Definition of Done |
+| [docs/SETUP.md](./docs/SETUP.md) | Developer onboarding — clone, install, run, and common issues |
+| [CONTRIBUTING.md](./CONTRIBUTING.md) | How to propose changes, PR expectations, and the review checklist |
+| [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) | Community standards and enforcement process |
 
 ---
 
