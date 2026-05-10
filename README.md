@@ -1,22 +1,24 @@
-# 📱 MoMo SMS Data Analytics Platform
+#  MoMo SMS Data Analytics Platform
 
 > An enterprise-level fullstack application that processes Mobile Money (MoMo) SMS data, extracts and categorizes transactions, persists them in a relational database, and visualizes financial insights through an interactive dashboard.
 
 ---
 
-## 👥 Team
+## Team
 
-**Team Name:** _[Add your team name here]_
+**Team Name:** _[Underrated Silicon Valley]_
 
-| Name | Role | GitHub |
-|------|------|--------|
-| _Member 1_ | ETL & Backend | `@username` |
-| _Member 2_ | Database & API | `@username` |
-| _Member 3_ | Frontend Dashboard | `@username` |
+| Name |             Role                      | GitHub |
+|          
+| Sano Rodrigue | ETL & Backend | `r.sano@alustudent.com` |
+|  Gary Murasira  | Database  | `g.murasira@alustudent.com` |
+|  Merci Ndekwe     | Frontend Dashboard | `m.ndekwe@alustudent.com` |
+|  Espoir Habimfura | API and Testing    |      `e.habimfura@alustudent.com`        |
+|  David Irihose    | Devops and Docs    |   `d.irihose@alustudent.com`
 
 ---
 
-## 📋 Project Description
+##  Project Description
 
 This project ingests raw MoMo (Mobile Money) SMS data in XML format and runs it through an ETL pipeline:
 
@@ -30,11 +32,11 @@ The dashboard displays summary cards, time-series charts, category breakdowns, a
 
 ---
 
-## 🏗️ High-Level Architecture
+##  High-Level Architecture
 
 ```mermaid
 flowchart LR
-    A[📨 Raw MoMo XML<br/>data/raw/momo.xml] --> B[⚙️ ETL Pipeline]
+    A[ Raw MoMo XML<br/>data/raw/momo.xml] --> B[ ETL Pipeline]
 
     subgraph B[ETL Pipeline]
         B1[parse_xml.py] --> B2[clean_normalize.py]
@@ -42,25 +44,25 @@ flowchart LR
         B3 --> B4[load_db.py]
     end
 
-    B --> C[(🗄️ SQLite<br/>data/db.sqlite3)]
-    C --> D[📦 dashboard.json]
-    D --> E[🌐 Static Frontend<br/>HTML / CSS / JS]
-    E --> F[👤 User]
+    B --> C[( SQLite<br/>data/db.sqlite3)]
+    C --> D[ dashboard.json]
+    D --> E[ Static Frontend<br/>HTML / CSS / JS]
+    E --> F[ User]
 
-    B -.errors.-> G[💀 Dead Letter<br/>data/logs/dead_letter/]
-    B -.logs.-> H[📝 etl.log]
+    B -.errors.-> G[ Dead Letter<br/>data/logs/dead_letter/]
+    B -.logs.-> H[ etl.log]
 
     C -.optional.-> I[🔌 FastAPI<br/>/transactions /analytics]
     I -.-> E
 ```
 
-📐 **Detailed Draw.io diagram:** [Open in draw.io](https://app.diagrams.net/#Uhttps://raw.githubusercontent.com/SanoRod00/MOMO-sms-analytics/main/docs/architecture/architecture.drawio)
+ **Detailed Draw.io diagram:** [Open in draw.io](https://app.diagrams.net/#Uhttps://raw.githubusercontent.com/SanoRod00/MOMO-sms-analytics/main/docs/architecture/architecture.drawio)
 
 ![High-Level Architecture](./docs/architecture/architecture.png)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer       | Tools                                           |
 |-------------|--------------------------------------------------|
@@ -72,7 +74,7 @@ flowchart LR
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 .
@@ -96,7 +98,7 @@ flowchart LR
 
 ---
 
-## 🚀 Setup & Run
+##  Setup & Run
 
 ### Prerequisites
 - Python 3.11+
@@ -133,15 +135,15 @@ bash scripts/serve_frontend.sh
 
 ---
 
-## 📊 Scrum Board
+##  Scrum Board
 
-🗂️ **Board link:** _[Add your GitHub Projects / Trello / Jira link here]_
+ **Board link:** _[Add your GitHub Projects / Trello / Jira link here]_
 
 Three columns: **To Do · In Progress · Done**. Issues labeled by domain: `etl`, `db`, `frontend`, `api`, `infra`, `docs`, `testing`.
 
 ---
 
-## 🤝 Contributing Workflow
+##  Contributing Workflow
 
 1. Pull latest `main`
 2. Create a feature branch: `git checkout -b feat/<short-description>`
@@ -151,6 +153,6 @@ Three columns: **To Do · In Progress · Done**. Issues labeled by domain: `etl`
 
 ---
 
-## 📝 License
+##  License
 
 MIT — see [LICENSE](./LICENSE).
