@@ -56,6 +56,8 @@ flowchart LR
 
 📐 **Detailed Draw.io diagram:** [Open in draw.io](<SHARE_LINK>)
 
+![High-Level Architecture](./docs/architecture/architecture.png)
+
 ---
 
 ## 🛠️ Tech Stack
