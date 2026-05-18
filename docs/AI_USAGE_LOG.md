@@ -91,3 +91,25 @@ This document records how each team member used AI tools during the project, wha
 - Wrote the README subsection covering all integrity and security features
 
 ---
+
+## Espoir Habimfura — MoMo Database Design Document PDF (Week 2)
+
+**Date:** 2026-05-18
+**Tool used:** Claude Desktop
+
+### What I used AI for
+- Used Claude Desktop to assist in assembling and structuring the `MoMo_Database_Design_Document.pdf`, compiling content from the team's existing markdown docs (schema rationale, ERD, data dictionary, integrity rules, and CRUD queries) into a cohesive design document
+- Asked Claude to suggest a logical section order and consistent formatting so the document reads as a unified deliverable rather than a collection of individual files
+- Used AI to help phrase technical descriptions of the 5-table schema and M:N junction table design clearly for a mixed audience
+
+### How I verified and adjusted the output
+- Reviewed every section of the PDF against the source files (`erd_rationale.md`, `data_dictionary.md`, `database_setup.sql`, `crud_operations.sql`) to confirm accuracy
+- Corrected any column names or constraint descriptions that did not match David's authoritative `database_setup.sql`
+- Added team-specific context and project background that AI could not generate
+
+### What I did myself
+- Made all final editorial decisions on content inclusion and section structure
+- Verified technical accuracy of all SQL references in the document
+- Exported and committed the final PDF
+
+---
