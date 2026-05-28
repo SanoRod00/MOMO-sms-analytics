@@ -12,6 +12,11 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from typing import Any, Optional, Tuple
 
+try:
+    from api.auth import authenticate
+except ImportError:
+    from auth import authenticate
+
 # ---------- constants ----------
 DATA_FILE = Path(__file__).parent / "data" / "transactions.json"
 HOST = "localhost"
@@ -117,10 +122,8 @@ class TransactionsHandler(BaseHTTPRequestHandler):
     # ------------------------------------------------------------------
 
     def do_GET(self) -> None:
-        # === AUTH HOOK (Gary fills this in) ===
-        # if not authenticate(self):
-        #     return self._send_unauthorized()
-        # =======================================
+        if not authenticate(self):
+            return self._send_unauthorized()
 
         resource, resource_id = self._parse_path()
         if resource is None:
@@ -144,10 +147,8 @@ class TransactionsHandler(BaseHTTPRequestHandler):
         self._send_json(404, {"error": "not found"})
 
     def do_POST(self) -> None:
-        # === AUTH HOOK (Gary fills this in) ===
-        # if not authenticate(self):
-        #     return self._send_unauthorized()
-        # =======================================
+        if not authenticate(self):
+            return self._send_unauthorized()
 
         resource, resource_id = self._parse_path()
         if resource is None:
@@ -165,10 +166,8 @@ class TransactionsHandler(BaseHTTPRequestHandler):
         self._send_json(404, {"error": "not found"})
 
     def do_PUT(self) -> None:
-        # === AUTH HOOK (Gary fills this in) ===
-        # if not authenticate(self):
-        #     return self._send_unauthorized()
-        # =======================================
+        if not authenticate(self):
+            return self._send_unauthorized()
 
         resource, resource_id = self._parse_path()
         if resource is None:
@@ -188,10 +187,8 @@ class TransactionsHandler(BaseHTTPRequestHandler):
         self._send_json(404, {"error": "not found"})
 
     def do_DELETE(self) -> None:
-        # === AUTH HOOK (Gary fills this in) ===
-        # if not authenticate(self):
-        #     return self._send_unauthorized()
-        # =======================================
+        if not authenticate(self):
+            return self._send_unauthorized()
 
         resource, resource_id = self._parse_path()
         if resource is None:
