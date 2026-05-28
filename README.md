@@ -126,6 +126,29 @@ curl -i -X DELETE http://localhost:8000/transactions/9999
 
 ---
 
+## API Authentication & Security (Gary Murasira)
+
+Basic Authentication is implemented in `api/auth.py` and hooked into every CRUD endpoint in `api/server.py`.
+
+### How it works
+Every request must include an `Authorization: Basic <base64>` header. The server decodes the header, validates the credentials, and returns `401 Unauthorized` with a `WWW-Authenticate` header if they are missing or incorrect.
+
+### Using the authenticated API
+
+```bash
+# All requests require credentials — use -u username:password
+curl.exe -u admin:password123 http://localhost:8000/transactions
+
+# 401 is returned without credentials
+curl.exe http://localhost:8000/transactions
+```
+
+### Files
+- [`api/auth.py`](./api/auth.py) — `authenticate()` function that decodes and validates Basic Auth headers
+- [`docs/auth_reflection.md`](./docs/auth_reflection.md) — reflection on Basic Auth limitations and how JWT/OAuth2 improve on them
+
+---
+
 ##  Tech Stack
 
 | Layer       | Tools                                           |
