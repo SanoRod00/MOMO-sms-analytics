@@ -65,3 +65,28 @@ This document records how each team member used AI tools during the project, wha
   to `system_logs` myself — decisions based on what makes sense for our domain
   (deleting a transaction should remove its participant links, but should not
   destroy historical log entries).
+
+---
+
+## Gary Murasira — Authentication & Security (Week 3)
+
+**Date:** 2026-05-19
+**Tool used:** Claude Code (claude.ai/code)
+
+### What I used AI for
+- Asked Claude to help write `docs/auth_reflection.md` — the 200–300 word write-up on Basic Auth weaknesses and how JWT and OAuth2 address them
+- Asked Claude to help draft the README subsection for the API Authentication section
+- Asked Claude for guidance on where to place the import in `server.py` and how to handle the ModuleNotFoundError when running the server directly
+
+### How I verified and adjusted the output
+- Wrote all code myself — `api/auth.py` and the auth hooks in `api/server.py`
+- Tested the authentication live by running the server and confirming a request without credentials returned `{"error": "unauthorized"}` and a request with valid credentials returned the full transaction list
+- Read through `auth_reflection.md` and the README subsection and confirmed the content was accurate before committing
+
+### What I did myself
+- Wrote the `authenticate()` function in `api/auth.py` from scratch — Base64 decoding, credential validation, and return logic
+- Replaced all 4 auth hook comment blocks in `server.py` with the live `authenticate()` calls
+- Debugged the `ModuleNotFoundError` independently and identified the import style fix
+- Tested both the 401 and 200 responses and captured screenshots
+
+---
